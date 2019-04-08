@@ -77,7 +77,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         timerLabel.isHidden = false
         runTimer()
-        
     }
     
     @IBAction func resetButton(_ sender: Any) {
@@ -86,7 +85,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         timerLabel.text = "0 Seconds"
         audioPlayer.stop()
         startBtn.isEnabled = true
-        
     }
     
     func runTimer() {
