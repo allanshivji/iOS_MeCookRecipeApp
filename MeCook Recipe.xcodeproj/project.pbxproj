@@ -13,6 +13,8 @@
 		9D5D8250222A312A00C9EC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5D824E222A312A00C9EC11 /* LaunchScreen.storyboard */; };
 		9D5D825A222A313B00C9EC11 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5D8259222A313B00C9EC11 /* CloudKit.framework */; };
 		9D5D8266222A51D600C9EC11 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5D8265222A51D600C9EC11 /* RecipeTableViewController.swift */; };
+		9DE024C8225BE5B30080D705 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE024C7225BE5B20080D705 /* TimerViewController.swift */; };
+		9DE024CA225BEFAE0080D705 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DE024C9225BEFAE0080D705 /* alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		9D5D8257222A313800C9EC11 /* MeCook Recipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MeCook Recipe.entitlements"; sourceTree = "<group>"; };
 		9D5D8259222A313B00C9EC11 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9D5D8265222A51D600C9EC11 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		9DE024C7225BE5B20080D705 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		9DE024C9225BEFAE0080D705 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +66,11 @@
 				9D5D8257222A313800C9EC11 /* MeCook Recipe.entitlements */,
 				9D5D8245222A312800C9EC11 /* AppDelegate.swift */,
 				9D5D8265222A51D600C9EC11 /* RecipeTableViewController.swift */,
+				9DE024C7225BE5B20080D705 /* TimerViewController.swift */,
 				9D5D8249222A312800C9EC11 /* Main.storyboard */,
 				9D5D824C222A312A00C9EC11 /* Assets.xcassets */,
 				9D5D824E222A312A00C9EC11 /* LaunchScreen.storyboard */,
+				9DE024C9225BEFAE0080D705 /* alarm.mp3 */,
 				9D5D8251222A312A00C9EC11 /* Info.plist */,
 			);
 			path = "MeCook Recipe";
@@ -144,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE024CA225BEFAE0080D705 /* alarm.mp3 in Resources */,
 				9D5D8250222A312A00C9EC11 /* LaunchScreen.storyboard in Resources */,
 				9D5D824D222A312A00C9EC11 /* Assets.xcassets in Resources */,
 				9D5D824B222A312800C9EC11 /* Main.storyboard in Resources */,
@@ -158,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5D8246222A312800C9EC11 /* AppDelegate.swift in Sources */,
+				9DE024C8225BE5B30080D705 /* TimerViewController.swift in Sources */,
 				9D5D8266222A51D600C9EC11 /* RecipeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,18 +29,105 @@
         <!--Timer-->
         <scene sceneID="Y2R-pX-aU8">
             <objects>
-                <viewController id="3p3-LA-RRA" sceneMemberID="viewController">
+                <viewController id="3p3-LA-RRA" customClass="TimerViewController" customModule="MeCook_Recipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lJ2-WS-O8E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osy-yY-pez">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="MHa-Ph-y8N">
+                                <rect key="frame" x="85" y="297" width="244" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goj-xz-GmD">
+                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-Zz-95u">
+                                        <rect key="frame" x="129.5" y="0.0" width="114.5" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWo-ra-nq9">
+                                <rect key="frame" x="94" y="441" width="226" height="44.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-El-7e5">
+                                <rect key="frame" x="61.5" y="523" width="291" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNZ-rf-e2O">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="62"/>
+                                        <color key="backgroundColor" red="0.0" green="0.24459942711891713" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="127" id="bmZ-cJ-7RG"/>
+                                            <constraint firstAttribute="height" constant="62" id="zgN-ae-vYt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButton:" destination="3p3-LA-RRA" eventType="touchUpInside" id="luW-io-mnN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhD-Xx-IWu">
+                                        <rect key="frame" x="164" y="0.0" width="127" height="62"/>
+                                        <color key="backgroundColor" red="1" green="0.21165109223931866" blue="0.13926735307034943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="127" id="gA4-qA-Bce"/>
+                                            <constraint firstAttribute="height" constant="62" id="wFw-So-KwK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="RESET">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButton:" destination="3p3-LA-RRA" eventType="touchUpInside" id="3FU-Us-By9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CWo-ra-nq9" firstAttribute="leading" secondItem="99X-25-xfX" secondAttribute="leading" constant="94" id="0j0-O0-PD5"/>
+                            <constraint firstItem="MHa-Ph-y8N" firstAttribute="centerX" secondItem="lJ2-WS-O8E" secondAttribute="centerX" id="3Ns-LD-XcG"/>
+                            <constraint firstItem="GxD-El-7e5" firstAttribute="leading" secondItem="99X-25-xfX" secondAttribute="leading" constant="61.5" id="D3o-MH-Gjn"/>
+                            <constraint firstItem="99X-25-xfX" firstAttribute="trailing" secondItem="GxD-El-7e5" secondAttribute="trailing" constant="61.5" id="FfQ-cB-63J"/>
+                            <constraint firstItem="MHa-Ph-y8N" firstAttribute="top" secondItem="osy-yY-pez" secondAttribute="bottom" constant="37" id="HfR-lw-gfK"/>
+                            <constraint firstItem="99X-25-xfX" firstAttribute="trailing" secondItem="MHa-Ph-y8N" secondAttribute="trailing" constant="85" id="T78-uI-G3I"/>
+                            <constraint firstItem="osy-yY-pez" firstAttribute="trailing" secondItem="99X-25-xfX" secondAttribute="trailing" id="VGA-Lq-deu"/>
+                            <constraint firstItem="osy-yY-pez" firstAttribute="leading" secondItem="99X-25-xfX" secondAttribute="leading" id="aBQ-rt-4eA"/>
+                            <constraint firstItem="osy-yY-pez" firstAttribute="top" secondItem="99X-25-xfX" secondAttribute="top" id="dyb-Gj-vbb"/>
+                            <constraint firstItem="MHa-Ph-y8N" firstAttribute="leading" secondItem="99X-25-xfX" secondAttribute="leading" constant="85" id="fbK-fx-GaV"/>
+                            <constraint firstItem="GxD-El-7e5" firstAttribute="top" secondItem="CWo-ra-nq9" secondAttribute="bottom" constant="37.5" id="ufs-rH-5z1"/>
+                            <constraint firstItem="GxD-El-7e5" firstAttribute="centerX" secondItem="lJ2-WS-O8E" secondAttribute="centerX" id="umh-HG-Itg"/>
+                            <constraint firstItem="CWo-ra-nq9" firstAttribute="top" secondItem="MHa-Ph-y8N" secondAttribute="bottom" constant="108" id="uvt-pk-yc5"/>
+                            <constraint firstItem="99X-25-xfX" firstAttribute="trailing" secondItem="CWo-ra-nq9" secondAttribute="trailing" constant="94" id="xbR-v4-0oN"/>
+                            <constraint firstItem="CWo-ra-nq9" firstAttribute="centerX" secondItem="lJ2-WS-O8E" secondAttribute="centerX" id="yQY-49-IDY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="99X-25-xfX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="Timer3" id="IuR-4o-fiF"/>
+                    <connections>
+                        <outlet property="hoursLabel" destination="goj-xz-GmD" id="jai-g8-Ssn"/>
+                        <outlet property="minutesLabel" destination="TsP-Zz-95u" id="fkz-FH-aN4"/>
+                        <outlet property="myComponentpicker" destination="osy-yY-pez" id="NYi-Ih-nLc"/>
+                        <outlet property="startBtn" destination="gNZ-rf-e2O" id="8Gp-ur-buM"/>
+                        <outlet property="timerLabel" destination="CWo-ra-nq9" id="Egg-el-1Jp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf7-Ge-eVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="-423"/>
+            <point key="canvasLocation" x="531.8840579710145" y="-423.21428571428572"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HIT-7f-9Wb">
