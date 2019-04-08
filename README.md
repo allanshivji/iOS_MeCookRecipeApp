@@ -1,6 +1,6 @@
 # MeCook Recipe - iOS App
 
-This is CS - 523 Final project
+## This is CS - 523 Final project
 
 ### Features
 
