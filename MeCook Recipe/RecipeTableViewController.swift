@@ -16,6 +16,10 @@ class RecipeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !CheckInternet.Connection() {
+            checkInternetConnection()
+        }
 
         refresh = UIRefreshControl()
         refresh.attributedTitle = NSAttributedString(string: "Pull to load Recipes")
@@ -27,6 +31,10 @@ class RecipeTableViewController: UITableViewController {
 
     
     @objc func loadData() {
+        
+        if !CheckInternet.Connection() {
+            checkInternetConnection()
+        }
         
         recipes = [CKRecord]()
         let publicData = CKContainer.default().publicCloudDatabase
@@ -45,11 +53,8 @@ class RecipeTableViewController: UITableViewController {
                     self?.tableView.reloadData()
                     self?.refresh.endRefreshing()
                 }
-                
             }
-            
         }
-        
     }
     
  
@@ -166,6 +171,15 @@ class RecipeTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    func checkInternetConnection () {
+        
+        let alert = UIAlertController(title: "Cellular Data is Turned Off", message: "Turn on cellular data or use Wi-Fi to access data", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
  
 

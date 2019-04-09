@@ -13,6 +13,8 @@
 		9D5D8250222A312A00C9EC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5D824E222A312A00C9EC11 /* LaunchScreen.storyboard */; };
 		9D5D825A222A313B00C9EC11 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5D8259222A313B00C9EC11 /* CloudKit.framework */; };
 		9D5D8266222A51D600C9EC11 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5D8265222A51D600C9EC11 /* RecipeTableViewController.swift */; };
+		9DBE6BC7225CF01700467A3D /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE6BC6225CF01700467A3D /* BrowserViewController.swift */; };
+		9DBE6BC9225D17C800467A3D /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE6BC8225D17C800467A3D /* CheckInternet.swift */; };
 		9DE024C8225BE5B30080D705 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE024C7225BE5B20080D705 /* TimerViewController.swift */; };
 		9DE024CA225BEFAE0080D705 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DE024C9225BEFAE0080D705 /* alarm.mp3 */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 		9D5D8257222A313800C9EC11 /* MeCook Recipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MeCook Recipe.entitlements"; sourceTree = "<group>"; };
 		9D5D8259222A313B00C9EC11 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9D5D8265222A51D600C9EC11 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		9DBE6BC6225CF01700467A3D /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		9DBE6BC8225D17C800467A3D /* CheckInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		9DE024C7225BE5B20080D705 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		9DE024C9225BEFAE0080D705 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +50,7 @@
 		9D5D8239222A312800C9EC11 = {
 			isa = PBXGroup;
 			children = (
+				9DBE6BC8225D17C800467A3D /* CheckInternet.swift */,
 				9D5D8244222A312800C9EC11 /* MeCook Recipe */,
 				9D5D8243222A312800C9EC11 /* Products */,
 				9D5D8258222A313B00C9EC11 /* Frameworks */,
@@ -67,6 +72,7 @@
 				9D5D8245222A312800C9EC11 /* AppDelegate.swift */,
 				9D5D8265222A51D600C9EC11 /* RecipeTableViewController.swift */,
 				9DE024C7225BE5B20080D705 /* TimerViewController.swift */,
+				9DBE6BC6225CF01700467A3D /* BrowserViewController.swift */,
 				9D5D8249222A312800C9EC11 /* Main.storyboard */,
 				9D5D824C222A312A00C9EC11 /* Assets.xcassets */,
 				9D5D824E222A312A00C9EC11 /* LaunchScreen.storyboard */,
@@ -165,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5D8246222A312800C9EC11 /* AppDelegate.swift in Sources */,
+				9DBE6BC7225CF01700467A3D /* BrowserViewController.swift in Sources */,
 				9DE024C8225BE5B30080D705 /* TimerViewController.swift in Sources */,
 				9D5D8266222A51D600C9EC11 /* RecipeTableViewController.swift in Sources */,
+				9DBE6BC9225D17C800467A3D /* CheckInternet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

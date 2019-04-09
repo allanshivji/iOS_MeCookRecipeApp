@@ -13,18 +13,74 @@
         <!--Browser-->
         <scene sceneID="2W2-we-o08">
             <objects>
-                <viewController id="Eyd-Dp-HPs" sceneMemberID="viewController">
+                <viewController id="Eyd-Dp-HPs" customClass="BrowserViewController" customModule="MeCook_Recipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pOw-y7-Iiv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Know the history of your Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-MO-cyX">
+                                <rect key="frame" x="20" y="44" width="374" height="25"/>
+                                <color key="backgroundColor" red="0.84965324741571058" green="0.44913315575448237" blue="0.47708058298419809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfp-Ge-a5P">
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="IJd-Xt-o3S">
+                                        <connections>
+                                            <action selector="backButton:" destination="Eyd-Dp-HPs" id="ZRe-Dt-2K4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1dO-l0-xPF"/>
+                                    <barButtonItem systemItem="refresh" id="1sk-II-u4T">
+                                        <connections>
+                                            <action selector="refreshButton:" destination="Eyd-Dp-HPs" id="WLZ-Mq-eg7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uYX-hD-GAP"/>
+                                    <barButtonItem systemItem="fastForward" id="EJ6-uE-jAd">
+                                        <connections>
+                                            <action selector="forwardButton:" destination="Eyd-Dp-HPs" id="fSF-aS-I52"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-P6-AJy">
+                                <rect key="frame" x="0.0" y="77" width="414" height="692"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qPa-P6-AJy" firstAttribute="top" secondItem="KhX-MO-cyX" secondAttribute="bottom" constant="8" id="1NU-tw-xND"/>
+                            <constraint firstItem="zfp-Ge-a5P" firstAttribute="leading" secondItem="asZ-8V-0QO" secondAttribute="leading" id="1yV-Nf-irs"/>
+                            <constraint firstItem="asZ-8V-0QO" firstAttribute="trailing" secondItem="KhX-MO-cyX" secondAttribute="trailing" constant="20" id="4eY-V7-Kgp"/>
+                            <constraint firstItem="zfp-Ge-a5P" firstAttribute="top" secondItem="qPa-P6-AJy" secondAttribute="bottom" id="G2N-h0-SSn"/>
+                            <constraint firstItem="zfp-Ge-a5P" firstAttribute="bottom" secondItem="asZ-8V-0QO" secondAttribute="bottom" id="HYY-ml-Qwl"/>
+                            <constraint firstItem="qPa-P6-AJy" firstAttribute="leading" secondItem="asZ-8V-0QO" secondAttribute="leading" id="KOH-Be-RIk"/>
+                            <constraint firstItem="qPa-P6-AJy" firstAttribute="trailing" secondItem="asZ-8V-0QO" secondAttribute="trailing" id="MsI-3O-FcO"/>
+                            <constraint firstItem="zfp-Ge-a5P" firstAttribute="trailing" secondItem="asZ-8V-0QO" secondAttribute="trailing" id="YG1-4J-xul"/>
+                            <constraint firstItem="KhX-MO-cyX" firstAttribute="leading" secondItem="asZ-8V-0QO" secondAttribute="leading" constant="20" id="nxz-X7-Iau"/>
+                            <constraint firstItem="KhX-MO-cyX" firstAttribute="top" secondItem="asZ-8V-0QO" secondAttribute="top" id="qKx-U6-wdq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="asZ-8V-0QO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Browser" image="Browser3" id="PdA-0q-86H"/>
+                    <connections>
+                        <outlet property="backBtn" destination="IJd-Xt-o3S" id="ZQf-gu-wYN"/>
+                        <outlet property="forwardBtn" destination="EJ6-uE-jAd" id="RBv-j9-4EI"/>
+                        <outlet property="webView" destination="qPa-P6-AJy" id="M93-xs-Qv1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpE-WO-aaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-9"/>
+            <point key="canvasLocation" x="-113.04347826086958" y="-9.375"/>
         </scene>
         <!--Timer-->
         <scene sceneID="Y2R-pX-aU8">
