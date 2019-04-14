@@ -9,3 +9,4 @@
 3. If another iPhone has this app and if the iCloud account is the same then the recipe data updated on one iPhone gets synchronised with the other iPhone automatically. So the other iPhone has the same recipe data.
 4. When clciked on Timer tab, there is a countdown timer which can be used by the user set time to make his recipe.
 5. The hours and minutes gets converted to seconds and when the time reached to 0 a alarm is switched on.
+6. It has a browser where a user can search for his recipe on Google.
