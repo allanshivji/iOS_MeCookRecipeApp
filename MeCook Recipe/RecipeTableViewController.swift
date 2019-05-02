@@ -92,10 +92,6 @@ class RecipeTableViewController: UITableViewController {
             let textField2 = alert.textFields![1]
             
             if textField.text != "" && textField2.text != "" {
-                //                print(String(textField.text!))
-                //                print(String(textField2.text!))
-                //                print(String(textView.text!))
-                
                 
                 //uploading data to cloud
                 let newRecipe = CKRecord(recordType: "Recipe")
@@ -116,7 +112,13 @@ class RecipeTableViewController: UITableViewController {
                             self.tableView.endUpdates()
                         }
                     } else {
-                        print("Not Saved")
+                        
+                        let iCloudAlert = UIAlertController(title: "Unable to upload Data to iCloud", message: "Make sure you have signed in into your iCloud account or check your Internet connection.", preferredStyle: .alert)
+                        
+                        let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        
+                        iCloudAlert.addAction(dismiss)
+                        self.present(iCloudAlert, animated: true, completion: nil)
                         
                     }
                 })
@@ -196,7 +198,7 @@ class RecipeTableViewController: UITableViewController {
     
     func checkInternetConnection () {
         
-        let alert = UIAlertController(title: "Cellular Data is Turned Off", message: "Turn on cellular data or use Wi-Fi to access data", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Cellular Data is Turned Off", message: "Turn on cellular data or use Wi-Fi to access data.", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
         }))

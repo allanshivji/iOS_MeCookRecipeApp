@@ -26,6 +26,10 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
+        if !CheckInternet.Connection() {
+            checkInternetConnection()
+        }
+        
         self.stepsTextArea.layer.borderColor = UIColor.lightGray.cgColor
         self.stepsTextArea.layer.borderWidth = 1
         self.stepsTextArea.layer.cornerRadius = 10
@@ -61,7 +65,7 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
         
         mailViewController.setToRecipients([""])
         mailViewController.setSubject("Hey Checkout this New Recipe")
-        mailViewController.setMessageBody("<h1>\(myTitle)</h1>", isHTML: true)
+        mailViewController.setMessageBody("<h1>\(myTitle)</h1> \n\nIngredients:\n\(myIngredients)\n\n\(mySteps)", isHTML: true)
         
         present(mailViewController, animated: true)
         
@@ -76,8 +80,19 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
         emailAlert.addAction(dismiss)
         self.present(emailAlert, animated: true, completion: nil)
     }
+    
 
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func checkInternetConnection () {
+        
+        let alert = UIAlertController(title: "Cellular Data is Turned Off", message: "Turn on cellular data or use Wi-Fi to access data.", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
