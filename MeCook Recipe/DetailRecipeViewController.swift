@@ -21,6 +21,8 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
     
     @IBOutlet weak var shareButton: UIButton!
     
+    var newMySteps: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +46,9 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
 
         titleLabel.text = myTitle
         ingredientsTextArea.text = myIngredients
-        stepsTextArea.text = mySteps
+        
+        newMySteps = mySteps.replacingOccurrences(of: "Steps:", with: "")
+        stepsTextArea.text = newMySteps
     }
     
     @IBAction func emailButton(_ sender: Any) {
@@ -65,7 +69,7 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
         
         mailViewController.setToRecipients([""])
         mailViewController.setSubject("Hey Checkout this New Recipe")
-        mailViewController.setMessageBody("<h1>\(myTitle)</h1> \n\nIngredients:\n\(myIngredients)\n\n\(mySteps)", isHTML: true)
+        mailViewController.setMessageBody("<h1>\(myTitle)</h1> <br />Ingredients:<br />\(myIngredients)<br /><br />Steps:<br />\(newMySteps)", isHTML: true)
         
         present(mailViewController, animated: true)
         
