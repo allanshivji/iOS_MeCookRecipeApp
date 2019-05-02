@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bX0-hE-1qO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bX0-hE-1qO">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -213,15 +213,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="oyf-CN-Rir" rowHeight="56" style="IBUITableViewCellStyleDefault" id="keP-Nu-HWi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="oyf-CN-Rir" rowHeight="56" style="IBUITableViewCellStyleDefault" id="keP-Nu-HWi">
                                 <rect key="frame" x="0.0" y="28" width="414" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="keP-Nu-HWi" id="Sib-lo-QLb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyf-CN-Rir">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="55.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="356" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -229,6 +229,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="0JB-KF-5qP" kind="show" id="4yF-cS-Ecr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -248,6 +251,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwk-V2-NvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="531.8840579710145" y="-1118.3035714285713"/>
+        </scene>
+        <!--Detail Recipe View Controller-->
+        <scene sceneID="MgZ-vD-hLM">
+            <objects>
+                <viewController id="0JB-KF-5qP" customClass="DetailRecipeViewController" customModule="MeCook_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rOA-Ph-ZG6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghz-El-ybP">
+                                <rect key="frame" x="20" y="121" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MFH-kO-ME6">
+                                <rect key="frame" x="20" y="170" width="374" height="125.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvB-Ql-f2R">
+                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2k-G2-M1U">
+                                        <rect key="frame" x="0.0" y="31.5" width="374" height="94"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="3uv-09-OIL"/>
+                                            <constraint firstAttribute="height" constant="94" id="hNI-9r-jYg"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HDn-aC-aY2">
+                                <rect key="frame" x="20" y="318" width="374" height="183.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtC-wS-ISA">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DID-72-31f">
+                                        <rect key="frame" x="0.0" y="31.5" width="374" height="152"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="Bvp-ez-DEk"/>
+                                            <constraint firstAttribute="height" constant="152" id="QoU-7L-dez"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-8d-sET">
+                                <rect key="frame" x="64" y="737" width="286" height="40"/>
+                                <color key="backgroundColor" red="0.062098631521801839" green="0.66182880143081091" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="gFr-OZ-NH1"/>
+                                    <constraint firstAttribute="height" constant="40" id="nIr-CS-1O7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Share This Recipe"/>
+                                <connections>
+                                    <action selector="emailButton:" destination="0JB-KF-5qP" eventType="touchUpInside" id="LBC-gT-aGL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MFH-kO-ME6" firstAttribute="centerX" secondItem="rOA-Ph-ZG6" secondAttribute="centerX" id="EoZ-rB-Hsf"/>
+                            <constraint firstItem="ghz-El-ybP" firstAttribute="top" secondItem="yk7-ff-mWa" secondAttribute="top" constant="33" id="FoR-wr-Ld6"/>
+                            <constraint firstItem="yk7-ff-mWa" firstAttribute="trailing" secondItem="HDn-aC-aY2" secondAttribute="trailing" constant="20" id="KAf-nX-wOV"/>
+                            <constraint firstItem="yk7-ff-mWa" firstAttribute="trailing" secondItem="MFH-kO-ME6" secondAttribute="trailing" constant="20" id="KKr-wo-qMo"/>
+                            <constraint firstItem="yk7-ff-mWa" firstAttribute="trailing" secondItem="ghz-El-ybP" secondAttribute="trailing" constant="20" id="ORJ-SA-Foo"/>
+                            <constraint firstItem="HDn-aC-aY2" firstAttribute="leading" secondItem="yk7-ff-mWa" secondAttribute="leading" constant="20" id="UvI-S4-wfu"/>
+                            <constraint firstItem="WY9-8d-sET" firstAttribute="leading" secondItem="yk7-ff-mWa" secondAttribute="leading" constant="64" id="eD8-VQ-aPE"/>
+                            <constraint firstItem="HDn-aC-aY2" firstAttribute="top" secondItem="MFH-kO-ME6" secondAttribute="bottom" constant="22.5" id="ewi-CX-5wr"/>
+                            <constraint firstItem="MFH-kO-ME6" firstAttribute="leading" secondItem="yk7-ff-mWa" secondAttribute="leading" constant="20" id="ipR-fH-s7v"/>
+                            <constraint firstItem="MFH-kO-ME6" firstAttribute="top" secondItem="ghz-El-ybP" secondAttribute="bottom" constant="8" id="isj-2q-79s"/>
+                            <constraint firstItem="yk7-ff-mWa" firstAttribute="trailing" secondItem="WY9-8d-sET" secondAttribute="trailing" constant="64" id="m8I-X1-ihM"/>
+                            <constraint firstItem="ghz-El-ybP" firstAttribute="leading" secondItem="yk7-ff-mWa" secondAttribute="leading" constant="20" id="vVi-42-KM9"/>
+                            <constraint firstItem="yk7-ff-mWa" firstAttribute="bottom" secondItem="WY9-8d-sET" secondAttribute="bottom" constant="36" id="zqv-KZ-RNp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yk7-ff-mWa"/>
+                    </view>
+                    <connections>
+                        <outlet property="ingredientsTextArea" destination="g2k-G2-M1U" id="6eE-fO-mto"/>
+                        <outlet property="shareButton" destination="WY9-8d-sET" id="vwC-6r-hbH"/>
+                        <outlet property="stepsTextArea" destination="DID-72-31f" id="0rS-QI-197"/>
+                        <outlet property="titleLabel" destination="ghz-El-ybP" id="H5P-8y-t7q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kch-vU-VKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430.4347826086957" y="-1118.3035714285713"/>
         </scene>
         <!--Recipe-->
         <scene sceneID="qAy-0M-SbI">

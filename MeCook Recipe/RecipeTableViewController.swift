@@ -40,6 +40,8 @@ class RecipeTableViewController: UITableViewController {
         let publicData = CKContainer.default().publicCloudDatabase
         
         let queryData = CKQuery(recordType: "Recipe", predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        
+        
         publicData.perform(queryData, inZoneWith: nil) { (results, error) in
             
             if let recipes = results {
@@ -144,6 +146,24 @@ class RecipeTableViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var indexPath: IndexPath = self.tableView.indexPathForSelectedRow!
+        
+        let myDestination = segue.destination as! DetailRecipeViewController
+        
+        let selectedData = recipes[indexPath.row]
+        
+        let myOwnTitle = selectedData["title"] as? String
+        let myOwnIngredients = selectedData["ingredients"] as? String
+        let myOwnSteps = selectedData["steps"] as? String
+        
+        myDestination.myTitle = myOwnTitle!
+        myDestination.myIngredients = myOwnIngredients!
+        myDestination.mySteps = myOwnSteps!
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -165,6 +185,7 @@ class RecipeTableViewController: UITableViewController {
         }
         
         let recipe = recipes[indexPath.row]
+        
         
         if let recipeContent = recipe["title"] as? String {
             cell.textLabel?.text = recipeContent
