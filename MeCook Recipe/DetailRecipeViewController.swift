@@ -21,8 +21,6 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
     
     @IBOutlet weak var shareButton: UIButton!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +38,6 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
         self.shareButton.layer.shadowRadius = 5
         self.shareButton.layer.masksToBounds = false
 
-        // Do any additional setup after loading the view.
         titleLabel.text = myTitle
         ingredientsTextArea.text = myIngredients
         stepsTextArea.text = mySteps
@@ -49,8 +46,6 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
     @IBAction func emailButton(_ sender: Any) {
         
         showMailComposer()
-        
-        
     }
     
     func showMailComposer() {
@@ -85,17 +80,4 @@ class DetailRecipeViewController: UIViewController, MFMailComposeViewControllerD
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
