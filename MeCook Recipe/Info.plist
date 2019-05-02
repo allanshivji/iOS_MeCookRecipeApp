@@ -34,8 +34,14 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict/>
+	<key>Allow Arbitrary Loads in Web Content</key>
+	<true/>
 	<key>Allow Arbitrary Loads</key>
-	<string>YES</string>
+	<true/>
+	<key>NSAllowsArbitraryLoadsForMedia</key>
+	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class BrowserViewController: UIViewController {
+class BrowserViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var backBtn: UIBarButtonItem!
@@ -23,7 +23,13 @@ class BrowserViewController: UIViewController {
             checkInternetConnection()
         }
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         webView.load(URLRequest(url: URL(string: "https://www.google.com")!))
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("Loaded...")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
  
