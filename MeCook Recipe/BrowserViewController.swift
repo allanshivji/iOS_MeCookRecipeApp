@@ -18,6 +18,7 @@ class BrowserViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.navigationDelegate = self
         
         if !CheckInternet.Connection() {
             checkInternetConnection()
@@ -27,12 +28,14 @@ class BrowserViewController: UIViewController, WKNavigationDelegate {
         webView.load(URLRequest(url: URL(string: "https://www.google.com")!))
     }
     
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("Loaded...")
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
- 
     @IBAction func backButton(_ sender: Any) {
         
         if !CheckInternet.Connection() {
