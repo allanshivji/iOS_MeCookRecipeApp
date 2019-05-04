@@ -26,8 +26,6 @@ class RecipeTableViewController: UITableViewController {
         refresh.addTarget(self, action: #selector(loadData), for: .valueChanged)
         self.tableView.addSubview(refresh)
         
-//        setupCloudSubscription()
-        
         loadData()
     }
     
@@ -210,7 +208,7 @@ class RecipeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
+        /* Animations for tableview start here */
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
         
         cell.layer.transform = rotationTransform
@@ -219,14 +217,8 @@ class RecipeTableViewController: UITableViewController {
             cell.layer.transform = CATransform3DIdentity
         }
         
+        /* Animations for tableview end here */
         
-        
-        
-        
-        
-        
-       
-
         if recipes.count == 0 {
             return cell
         }
