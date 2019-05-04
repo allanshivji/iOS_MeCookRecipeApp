@@ -28,39 +28,6 @@ class RecipeTableViewController: UITableViewController {
         
         loadData()
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        animateTableView()
-//    }
-    
-//    func setupCloudSubscription() {
-//
-//        let userDefaults = UserDefaults.standard
-//
-//        if userDefaults.bool(forKey: "subscribed") == false {
-//
-//            let predicate = NSPredicate(format: "TRUEPREDICATE", argumentArray: nil)
-//            let subscription = CKQuerySubscription(recordType: "Recipe", predicate: predicate, options: CKQuerySubscription.Options.firesOnRecordCreation)
-//
-//            let notificationInfo = CKSubscription.NotificationInfo()
-//            notificationInfo.alertLocalizationKey = "New Recipe Added"
-//            notificationInfo.shouldBadge = true
-//
-//            subscription.notificationInfo = notificationInfo
-//
-//            let publicData = CKContainer.default().publicCloudDatabase
-//
-//            publicData.save(subscription, completionHandler: {subscription, error in
-//                if error != nil {
-//                    print(error?.localizedDescription)
-//                } else {
-//                    userDefaults.set(true, forKey: "subscribed")
-//                    userDefaults.synchronize()
-//                }
-//            })
-//        }
-//    }
 
     
     @objc func loadData() {
@@ -167,7 +134,6 @@ class RecipeTableViewController: UITableViewController {
                     self.present(alert, animated: true)
                     
                 }
-                
             }
         }))
         
@@ -208,6 +174,7 @@ class RecipeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
         /* Animations for tableview start here */
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
         
@@ -241,26 +208,5 @@ class RecipeTableViewController: UITableViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
-//    func animateTableView() {
-//        print("Hello..........")
-//        tableView.reloadData()
-//        let cells = tableView.visibleCells
-//
-//        let height = tableView.bounds.size.height
-//
-//        for cell in cells {
-//            cell.transform = CGAffineTransform(translationX: 0, y: height)
-//        }
-//
-//        var delayCounter = 0
-//        for cell in cells {
-//            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-//                cell.transform = CGAffineTransform.identity
-//                }, completion: nil)
-//            delayCounter += 1
-//        }
-//    }
 
 }
