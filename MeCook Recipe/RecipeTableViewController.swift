@@ -175,6 +175,7 @@ class RecipeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        
         /* Animations for tableview start here */
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
         

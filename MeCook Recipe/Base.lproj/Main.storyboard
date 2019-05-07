@@ -94,10 +94,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osy-yY-pez">
-                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="349"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="MHa-Ph-y8N">
-                                <rect key="frame" x="85" y="297" width="244" height="36"/>
+                                <rect key="frame" x="85" y="430" width="244" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goj-xz-GmD">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="36"/>
@@ -114,13 +114,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWo-ra-nq9">
-                                <rect key="frame" x="94" y="441" width="226" height="44.5"/>
+                                <rect key="frame" x="94" y="574" width="226" height="44.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-El-7e5">
-                                <rect key="frame" x="61.5" y="523" width="291" height="62"/>
+                                <rect key="frame" x="61.5" y="656" width="291" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNZ-rf-e2O">
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="62"/>
@@ -162,6 +162,7 @@
                             <constraint firstItem="GxD-El-7e5" firstAttribute="leading" secondItem="99X-25-xfX" secondAttribute="leading" constant="61.5" id="D3o-MH-Gjn"/>
                             <constraint firstItem="99X-25-xfX" firstAttribute="trailing" secondItem="GxD-El-7e5" secondAttribute="trailing" constant="61.5" id="FfQ-cB-63J"/>
                             <constraint firstItem="MHa-Ph-y8N" firstAttribute="top" secondItem="osy-yY-pez" secondAttribute="bottom" constant="37" id="HfR-lw-gfK"/>
+                            <constraint firstItem="MHa-Ph-y8N" firstAttribute="centerY" secondItem="lJ2-WS-O8E" secondAttribute="centerY" id="L9k-RY-R3R"/>
                             <constraint firstItem="99X-25-xfX" firstAttribute="trailing" secondItem="MHa-Ph-y8N" secondAttribute="trailing" constant="85" id="T78-uI-G3I"/>
                             <constraint firstItem="osy-yY-pez" firstAttribute="trailing" secondItem="99X-25-xfX" secondAttribute="trailing" id="VGA-Lq-deu"/>
                             <constraint firstItem="osy-yY-pez" firstAttribute="leading" secondItem="99X-25-xfX" secondAttribute="leading" id="aBQ-rt-4eA"/>
@@ -216,15 +217,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="oyf-CN-Rir" rowHeight="75" style="IBUITableViewCellStyleDefault" id="keP-Nu-HWi">
-                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="oyf-CN-Rir" rowHeight="88" style="IBUITableViewCellStyleDefault" id="keP-Nu-HWi">
+                                <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="keP-Nu-HWi" id="Sib-lo-QLb">
-                                    <rect key="frame" x="0.0" y="0.0" width="376" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="87.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyf-CN-Rir">
-                                            <rect key="frame" x="20" y="0.0" width="356" height="74.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="356" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <nil key="textColor"/>
